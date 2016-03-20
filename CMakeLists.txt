@@ -2,10 +2,15 @@ cmake_minimum_required(VERSION 2.8)
 
 project(game)
 
-set(BIN "glfw_test")
+set(BIN main)
+
+set(CMAKE_ARCHIVE_OUTPUT_DIRECTORY build/lib)
+set(CMAKE_LIBRARY_OUTPUT_DIRECTORY build/lib)
+set(CMAKE_RUNTIME_OUTPUT_DIRECTORY build)
 
 include_directories(include)
-add_executable(${BIN} src/glfw_test.c)
+
+add_executable(${BIN} src/main.c)
 
 # GLFW
 # turn off extra GLFW make targets
